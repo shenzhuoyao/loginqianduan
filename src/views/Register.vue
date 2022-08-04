@@ -95,16 +95,29 @@ export default {
       //注册发送的post请求后端端口！！！
 
       this.axios
+<<<<<<< HEAD
         .post("http://localhost:8080/user", this.ruleForm)
         .then((resp) => {
           let data = resp.data;
           if (data.sucess) {
+=======
+        .post("http://localhost:8080/auth/register", this.ruleForm)
+        .then((resp) => {
+          let data = resp.data;
+          if (data.success) {
+>>>>>>> 47075d4 (login2)
             this.ruleForm = {};
             this.$message({
               message: "注册成功",
               type: "success",
             });
+<<<<<<< HEAD
             this.$router.push({ path: "/Home" });
+=======
+            this.$router.push({ path: "/" });
+          } else {
+            this.$message.error("注册失败");
+>>>>>>> 47075d4 (login2)
           }
         });
 

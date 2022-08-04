@@ -51,16 +51,28 @@ export default {
       //登录发送的post请求后端端口！！！
 
       this.axios
+<<<<<<< HEAD
         .post("http://localhost:8081/login", this.loginForm)
         .then((resp) => {
           let data = resp.data;
           if (data.sucess) {
+=======
+        .post("http://localhost:10010/auth/login", this.loginForm)
+        .then((resp) => {
+          let data = resp.data;
+          if (data.success) {
+>>>>>>> 47075d4 (login2)
             this.loginForm = {};
             this.$message({
               message: "登录成功",
               type: "success",
             });
             this.$router.push({ path: "/Home" });
+<<<<<<< HEAD
+=======
+          } else {
+            this.$message.error("账号或密码错误，登陆失败");
+>>>>>>> 47075d4 (login2)
           }
         });
 
@@ -69,6 +81,10 @@ export default {
       //   type: "success",
       // });
       // this.$router.push({ path: "/Home" });
+<<<<<<< HEAD
+=======
+      // this.$message.error("账号或密码错误，登陆失败");
+>>>>>>> 47075d4 (login2)
     },
     toRegister() {
       this.$router.push({ path: "/Register" });
